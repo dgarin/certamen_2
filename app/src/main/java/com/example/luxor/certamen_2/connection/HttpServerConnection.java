@@ -19,32 +19,31 @@ public class HttpServerConnection {
         try {
             URL url = new URL(myUrl);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
             conn.setConnectTimeout(timeOut);
             conn.setRequestMethod("GET");
-            //retener informacion
             conn.setDoInput(true);
 
             conn.connect();
 
             InputStream is = conn.getInputStream();
             return readIt(is);
-
         } catch (MalformedURLException e) {
             e.printStackTrace();
-            return "Bad URL";
+            return null;
         } catch (IOException e) {
             e.printStackTrace();
-            return "Error";
+            return null;
         }
-
     }
 
-    public String readIt(InputStream stream) throws IOException, UnsupportedEncodingException {
-
+    private String readIt(InputStream stream) throws IOException {
         Reader reader = null;
         StringBuilder inputStringBuilder = new StringBuilder();
+
         reader = new InputStreamReader(stream, "UTF-8");
         BufferedReader bufferedReader = new BufferedReader(reader);
+
         String line = bufferedReader.readLine();
         while(line != null){
             inputStringBuilder.append(line);
@@ -53,6 +52,5 @@ public class HttpServerConnection {
         }
         return inputStringBuilder.toString();
     }
-
 }
 

@@ -8,39 +8,39 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.luxor.certamen2.MainActivity">
+    tools:context="com.example.luxor.certamen2.MainActivity"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <TextView
+        android:text="Git Finder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Git Finder"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp"
-        android:textSize="50sp"
-        android:textStyle="normal|bold"
-        android:textColor="@color/colorAccent"
-        android:id="@+id/bt1" />
-
-    <Button
-        android:text="Buscar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:id="@+id/button" />
+        android:layout_marginTop="60dp"
+        android:id="@+id/textView"
+        android:textSize="40sp"
+        android:textColorLink="@android:color/background_dark" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Usuario"
-        android:ems="18"
-        android:layout_marginTop="170dp"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView2"
+        android:ems="10"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:textSize="12sp" />
+        android:layout_marginTop="41dp"
+        android:id="@+id/editText"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:hint="Usuario"
+        android:textColorLink="?attr/colorPrimary" />
 
+    <Button
+        android:text="Buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp" />
 </RelativeLayout>

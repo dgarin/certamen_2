@@ -8,30 +8,29 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-
-    Button buscar;
-
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Button boton;
+    EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buscar = (Button)findViewById(R.id.button);
+        boton = (Button) findViewById(R.id.button);
+        boton.setOnClickListener(this);
+        editText = (EditText) findViewById(R.id.editText);
+    }
 
-
-
-        buscar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                Intent buscar = new Intent(MainActivity.this, ListaRepos.class);
-                startActivity(buscar);
-
-
-            }
-        });
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.button:
+                String user = editText.getText().toString();
+                Intent i = new Intent(MainActivity.this,ListaRepoActivity.class);
+                i.putExtra("usuario",user);
+                startActivity(i);
+                break;
+        }
     }
 }
