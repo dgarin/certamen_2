@@ -1,4 +1,4 @@
-package com.example.luxor.certamen_2;
+package com.example.luxor.certamen_2.acitivities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,7 +10,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.luxor.certamen_2.ItemClickListener;
+import com.example.luxor.certamen_2.R;
+import com.example.luxor.certamen_2.adapter.UIAdapter;
 import com.example.luxor.certamen_2.connection.HttpServerConnection;
+import com.example.luxor.certamen_2.model.Repo;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,6 +35,7 @@ public class ListaRepoActivity extends AppCompatActivity implements ItemClickLis
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private List<Repo> repositories;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

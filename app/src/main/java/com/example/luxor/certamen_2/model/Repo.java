@@ -1,4 +1,4 @@
-package com.example.luxor.certamen_2;
+package com.example.luxor.certamen_2.model;
 
 /**
  * Created by luxor on 02-11-16.

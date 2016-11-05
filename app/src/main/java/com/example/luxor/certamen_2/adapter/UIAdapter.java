@@ -1,10 +1,14 @@
-package com.example.luxor.certamen_2;
+package com.example.luxor.certamen_2.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.luxor.certamen_2.ItemClickListener;
+import com.example.luxor.certamen_2.R;
+import com.example.luxor.certamen_2.model.Repo;
 
 import java.util.List;
 
